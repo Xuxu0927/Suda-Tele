@@ -1,4 +1,4 @@
-# 基于 mkdocs-material 的苏大电子信息学院资源库Suda-Tele
+# 苏大电子信息学院资源库Suda-Tele
 
 ## 简介
 
