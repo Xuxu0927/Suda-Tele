@@ -1,8 +1,8 @@
 # [Info] 基本信息
-site_name: mkdocs 网站模板 # 左上角标题
-site_url: https://gis-xh.github.io/mkdocs-site
-site_author: gis-xh
-site_description: 基于 mkdocs-material 的静态网站模板
+site_name: Suda-Tele # 左上角标题
+site_url: https://xuxu0927.github.io/Suda-Tele/
+site_author: Xuxu0927
+site_description: 苏大电子信息课程资料指南
 
 # [UI] 界面设置
 ## [top]
@@ -37,16 +37,16 @@ theme:
     repo: fontawesome/brands/github-alt
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
-repo_url: https://github.com/gis-xh/mkdocs-site # 右上角点击跳转的链接
-repo_name: gis-xh/mkdocs-site # 右上角的名字
+repo_url: https://github.com/Xuxu0927/Suda-Tele # 右上角点击跳转的链接
+repo_name: Suda-Tele # 右上角的名字
 ## [bottom-left corner]
-copyright: Copyright &copy; 2023 gis-xh # 左下角的版权声明
+copyright: Copyright &copy; 2024 gis-xh # 左下角的版权声明
 ## [bottom-right corner]
 extra:
   social: # icons
     - icon: fontawesome/brands/github
-      link: https://github.com/gis-xh
-      name: GitHub | gis-xh # 鼠标悬浮提示
+      link: https://github.com/Xuxu0927
+      name: GitHub | Xuxu0927 # 鼠标悬浮提示
   
 
 # [Navigtion] 导航栏
