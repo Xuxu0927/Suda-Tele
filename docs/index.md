@@ -10,24 +10,16 @@
 
 ## 库地址
 
-<font color=green size=10>[请点击此处跳转](https://github.com/Xuxu0927/Suda-Tele)</font>
+<font color=green size=5>[Github仓库](https://github.com/Xuxu0927/Suda-Tele/tree/main/%E8%B5%84%E6%96%99%E5%BA%93)</font>
 
-<font color=green size=10>我是尺寸</font>
+<font color=green size=5>[国内flowus仓库](https://flowus.cn/xuhu/share/7b2777c4-5670-4a6a-91ed-98e33d41b826?code=JHATBC)</font>
 
 ## 说明
 
 1. 本由学院各学长学姐前辈们热心分享，感谢他们！并由Xuxu0927整理汇总。
 2. 本项目为公益项目，旨在方便学院学生复习备考，并且指明方向。
-3. 由于资料普遍较大且形式多样（包含仿真文件）将下载文件放置至单独文件夹<u>资料库</u>中[请点击此处跳转](https://github.com/Xuxu0927/Suda-Tele)。
-4. 跳转国内下载（借助flowus）下载[请点击此处跳转](https://flowus.cn/xuhu/share/7b2777c4-5670-4a6a-91ed-98e33d41b826?code=JHATBC)但更新一般最先于github。
+3. 由于资料普遍较大且形式多样（包含仿真文件）将下载文件放置至单独文件夹<u>资料库</u>中。
+4. 跳转国内下载（借助flowus）下载但此方式打包较慢，且更新一般最先于github。
 5. 本库仍然在持续不断维护更新中，资源有所不足，错误也在所难免。如有侵权删除/补充资源/错误可以及时联系更新。
 6. 大一数学公共课[请点击此处跳转](https://flowus.cn/xuhu/share/b4232b76-834b-43b5-8312-af816ded7428?code=JHATBC)。
-
-
-
-
-
-
-
-
-
+7. 

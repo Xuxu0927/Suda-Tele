@@ -1,22 +1,24 @@
-# 基于 mkdocs-material 的静态网站模板
+# 基于 mkdocs-material 的苏大电子信息学院资源库Suda-Tele
 
+## 简介
 
+苏州大学电子信息学院前身是始建于1987年的苏州大学工学院电子工程系，1999年更名为通信与电子工程系，2002年定名为电子信息学院。经过30多年的建设，学院迅速壮大，已形成学士、硕士、博士、博士后完整的培养体系，亦已成为电子信息产业高层次创新人才的重要培养基地。
 
-## 在线地址
+学院覆盖三个一级学科：“信息与通信工程”、“电子科学与技术”和”集成电路科学与工程“，其中“信息与通信工程”被列为江苏省“十三五”重点学科，江苏省“十四五”优势学科；学院拥有“信息与通信工程”博士后科研流动站，1个一级学科博士点——信息与通信工程，2个一级学科学术学位硕士点——电子科学与技术和集成电路科学与工程，1个硕士专业学位点——电子信息。
 
-- 模板在线地址：https://gis-xh.github.io/mkdocs-site
+学院现有电子信息工程、电子科学与技术、通信工程和集成电路设计与集成系统4个本科专业，其中通信工程专业和电子信息工程专业双双入选国家一流本科专业建设点，均通过中国工程教育专业认证，电子信息工程入选江苏省产教融合型品牌专业，电子科学与技术专业入选江苏省一流本科专业建设点。
 
+## 库地址
 
+<font color=green size=5>[Github仓库](https://github.com/Xuxu0927/Suda-Tele/tree/main/%E8%B5%84%E6%96%99%E5%BA%93)</font>
 
-## 感谢
+<font color=green size=5>[国内flowus仓库](https://flowus.cn/xuhu/share/7b2777c4-5670-4a6a-91ed-98e33d41b826?code=JHATBC)</font>
 
-&emsp;&emsp;感谢美国田纳西州大学吴秋生老师的 geemap 官网与清华大学杨希杰同学的个人网站的内容，本模板是参考他们基于 mkdocs-material 部署的在线文档网站的内容与框架，并结合 [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) 官网内容制作而成。
+## 说明
 
-- Geemap官网：https://geemap.org/
-
-- mkdocs-material 官网：https://squidfunk.github.io/mkdocs-material/
-
-- 杨希杰的个人网站：https://yang-xijie.github.io/BLOG/Markdown/mkdocs-site/
-
-
-
+1. 本由学院各学长学姐前辈们热心分享，感谢他们！并由Xuxu0927整理汇总。
+2. 本项目为公益项目，旨在方便学院学生复习备考，并且指明方向。
+3. 由于资料普遍较大且形式多样（包含仿真文件）将下载文件放置至单独文件夹<u>资料库</u>中。
+4. 跳转国内下载（借助flowus）下载但此方式打包较慢，且更新一般最先于github。
+5. 本库仍然在持续不断维护更新中，资源有所不足，错误也在所难免。如有侵权删除/补充资源/错误可以及时联系更新。
+6. 大一数学公共课[请点击此处跳转](https://flowus.cn/xuhu/share/b4232b76-834b-43b5-8312-af816ded7428?code=JHATBC)。
