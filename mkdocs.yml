@@ -1,11 +1,11 @@
-site_name: CS自学指南
-site_url: https://csdiy.wiki/
-site_author: PKUFlyingPig
+site_name: Suda-Tele
+site_url: https://xuxu0927.github.io/Suda-Tele/
+site_author: Xuxu0927
 site_description: >-
-  CS自学指南
+  苏大电子信息指南
 
-repo_name: cs-self-learning
-repo_url: https://github.com/pkuflyingpig/cs-self-learning/
+repo_name: Suda-Tele
+repo_url: https://github.com/Xuxu0927/Suda-Tele
 
 copyright: Copyright &copy; 2021-present <a href="https://github.com/PKUFlyingPig" target="_blank" rel="noopener noreferrer">PKUFlyingPig</a>
 
