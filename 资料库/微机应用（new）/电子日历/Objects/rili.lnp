@@ -1,0 +1,6 @@
+".\Objects\main.obj",
+".\Objects\DS1302.obj",
+".\Objects\LCD1602.obj",
+".\Objects\LED.obj" 
+TO ".\Objects\rili" 
+PRINT(".\Listings\rili.m51") RAMSIZE(256) 

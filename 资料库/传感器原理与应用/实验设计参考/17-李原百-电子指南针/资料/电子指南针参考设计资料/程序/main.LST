@@ -1,0 +1,202 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              05/19/2019 14:19:27 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "intrins.h"
+   3          #include "math.h"
+   4          #include "iic.h"
+   5          #include "lcd.h"
+   6          #include "stdio.h"
+   7          
+   8          
+   9          
+  10          u8 ge=0,shi=0,bai=0,qian=0,wan=0;          //显示变量             
+  11          u8 BUF[8]=0;             //数据缓冲区
+  12          
+  13          //******************************显示在LCD的数据取位********************************//
+  14          void Conversion(u16 temp_data)  
+  15          {  
+  16   1          wan=temp_data/10000+0x30 ;
+  17   1          temp_data=temp_data%10000;   //取余运算
+  18   1          qian=temp_data/1000+0x30 ;
+  19   1          temp_data=temp_data%1000;    //取余运算
+  20   1          bai=temp_data/100+0x30   ;
+  21   1          temp_data=temp_data%100;     //取余运算
+  22   1          shi=temp_data/10+0x30    ;
+  23   1          temp_data=temp_data%10;      //取余运算
+  24   1          ge=temp_data+0x30;  
+  25   1      }
+  26          
+  27          
+  28          void main()
+  29          {
+  30   1      //  u16 i;
+  31   1        int X=0,Y=0,Z=0;
+  32   1        double Angle_XY=0,Angle_XZ=0,Angle_YZ=0, angle;;  
+  33   1        Init_Lcd();
+  34   1        
+  35   1        
+  36   1        Init_HMC5883();
+  37   1        
+  38   1        Display_One_Char(2,0,'Z'); 
+  39   1        Display_One_Char(3,0,'h'); 
+  40   1        Display_One_Char(4,0,'i'); 
+  41   1      
+  42   1        Display_One_Char(6,0,'N');
+  43   1        Display_One_Char(7,0,'a');
+  44   1        Display_One_Char(8,0,'n');
+  45   1      
+  46   1        Display_One_Char(10,0,'Z');
+  47   1        Display_One_Char(11,0,'h');
+  48   1        Display_One_Char(12,0,'e');
+  49   1        Display_One_Char(13,0,'n');
+  50   1      
+  51   1        Display_One_Char(4,1,'E'); 
+  52   1        Display_One_Char(5,1,':'); 
+  53   1        Display_One_Char(9,1,'.'); 
+  54   1              
+  55   1        Delay_ms(300);
+C51 COMPILER V9.52.0.0   MAIN                                                              05/19/2019 14:19:27 PAGE 2   
+
+  56   1        while(1)            
+  57   1        { 
+  58   2          Multiple_Read_HMC5883();              //连续读取三轴角度数据，存储在BUF中 
+  59   2          //---------显示XY轴
+  60   2          X=BUF[1] << 8 | BUF[0]; //Combine MSB and LSB of X Data output register  最高有效位
+  61   2          Y=BUF[3] << 8 | BUF[2]; //Combine MSB and LSB of Y Data output register
+  62   2          Z=BUF[5] << 8 | BUF[4]; //Combine MSB and LSB of Z Data output register
+  63   2          
+  64   2          if(X>0x7fff)X-=0xffff;    
+  65   2          if(Y>0x7fff)Y-=0xffff;
+  66   2          if(Z>0x7fff)Z-=0xffff;   
+  67   2          
+  68   2          
+  69   2          Angle_XY= atan2((double)Y,(double)X) * (180 / 3.14159265) + 180; //计算XY平面角度
+  70   2          Angle_XY*=10;
+  71   2          angle=Angle_XY;
+  72   2          Conversion(Angle_XY);       //计算XY平面角度数据和显示
+  73   2          Display_One_Char(5,1,':'); 
+  74   2          Display_One_Char(6,1,qian); 
+  75   2          Display_One_Char(7,1,bai); 
+  76   2          Display_One_Char(8,1,shi); 
+  77   2          Display_One_Char(9,1,'.'); 
+  78   2          Display_One_Char(10,1,ge);
+  79   2          
+  80   2          if((angle >= 3380) || (angle <= 220))   //北 N
+  81   2           {
+  82   3             
+  83   3              Display_One_Char(3,1,'N'); 
+  84   3              Display_One_Char(4,1,' '); 
+  85   3           }
+  86   2          if((angle >= 230) && (angle <= 670))    //东 北
+  87   2          {
+  88   3             
+  89   3              Display_One_Char(3,1,'E'); 
+  90   3              Display_One_Char(4,1,'N'); 
+  91   3           }
+  92   2          if((angle >= 680) && (angle <= 1120))   //东 E
+  93   2          {
+  94   3             
+  95   3              Display_One_Char(3,1,'E'); 
+  96   3              Display_One_Char(4,1,' '); 
+  97   3           }
+  98   2          if((angle >= 1130) && (angle <= 1570))    //东 南
+  99   2            {
+ 100   3             
+ 101   3              Display_One_Char(3,1,'E'); 
+ 102   3              Display_One_Char(4,1,'S'); 
+ 103   3           }
+ 104   2          if((angle >= 1580) && (angle <= 2010))    //南  S
+ 105   2            {
+ 106   3             
+ 107   3              Display_One_Char(3,1,'S'); 
+ 108   3              Display_One_Char(4,1,' '); 
+ 109   3           }
+ 110   2          if((angle >= 2020) && (angle <= 2460))    //西 南  
+ 111   2            {
+ 112   3             
+ 113   3              Display_One_Char(3,1,'W'); 
+ 114   3              Display_One_Char(4,1,'S'); 
+ 115   3           }
+ 116   2          if((angle >= 2470) && (angle <= 2910))    //西  W  
+ 117   2            {
+C51 COMPILER V9.52.0.0   MAIN                                                              05/19/2019 14:19:27 PAGE 3   
+
+ 118   3             
+ 119   3              Display_One_Char(3,1,'W'); 
+ 120   3              Display_One_Char(4,1,' '); 
+ 121   3           }  
+ 122   2          if((angle >= 2920) && (angle <= 3360))    //西  北  
+ 123   2          {
+ 124   3             
+ 125   3              Display_One_Char(3,1,'W'); 
+ 126   3              Display_One_Char(4,1,'N'); 
+ 127   3           }
+ 128   2          
+ 129   2          
+ 130   2          /*
+ 131   2          Angle_XZ= atan2((double)Z,(double)X) * (180 / 3.14159265) + 180; //计算XZ平面角度
+ 132   2          Angle_XZ*=10;
+ 133   2          Conversion(Angle_XZ);       //计算XZ平面角度数据和显示
+ 134   2          
+ 135   2          Angle_YZ= atan2((double)Z,(double)Y) * (180 / 3.14159265) + 180; //计算YZ平面角度
+ 136   2          Angle_YZ*=10;
+ 137   2          Conversion(Angle_YZ);       //计算YZ平面角度数据和显示
+ 138   2          */
+ 139   2        
+ 140   2          Delay_ms(500);   //延时                     
+ 141   2        }
+ 142   1      
+ 143   1      
+ 144   1      
+ 145   1      }
+ 146          
+ 147          
+ 148          
+ 149          
+ 150          
+ 151          
+ 152          
+ 153          
+ 154          
+ 155          
+ 156          
+ 157          
+ 158          
+ 159          
+ 160          
+ 161          
+ 162          
+ 163          
+ 164          
+ 165          
+ 166          
+ 167          
+ 168          
+ 169          
+ 170          
+ 171          
+ 172          
+ 173          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1042    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.52.0.0   MAIN                                                              05/19/2019 14:19:27 PAGE 4   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     13      22
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

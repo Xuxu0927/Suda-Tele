@@ -1,0 +1,11 @@
+dt = 0.01;
+T = 5;
+x = 0: dt: T;
+f1 = (x > 0) - (x > 1);
+f2 = exp(-x);
+figure(1)
+plot(x, f1, 'r', x, f2, 'g');
+f = conv(f1, f2) * dt;
+xf = 2 * x(1): dt: 2 * x(end);
+figure(2)
+plot(xf, f)
