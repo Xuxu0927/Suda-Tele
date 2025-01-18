@@ -116,9 +116,6 @@ plugins:
             进阶路线图: Roadmap
             后记: Postscript
   - search:
-      lang:
-        - zh
-        - en
   - git-revision-date:
   - minify:
       minify_html: true
