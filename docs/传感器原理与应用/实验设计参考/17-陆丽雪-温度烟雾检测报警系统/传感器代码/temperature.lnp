@@ -1,6 +1,0 @@
-"STARTUP.obj",
-"warning.obj",
-"onewire.obj",
-"i2c.obj" 
-TO "temperature" 
-RAMSIZE(256) 

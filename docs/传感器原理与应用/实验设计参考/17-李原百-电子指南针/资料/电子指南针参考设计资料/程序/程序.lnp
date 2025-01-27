@@ -1,6 +1,0 @@
-"STARTUP.obj",
-"iic.obj",
-"lcd.obj",
-"main.obj" 
-TO "³ÌÐò" 
-RAMSIZE(256) 
