@@ -10,7 +10,7 @@
 
 ## 库地址
 
-<font color=green size=5>[Github仓库——少](https://github.com/Xuxu0927/Suda-Tele/tree/main/%E8%B5%84%E6%96%99%E5%BA%93)</font>
+<font color=green size=5>[Github仓库——少](https://github.com/Xuxu0927/Suda-Tele/tree/main/docs/%E8%B5%84%E6%96%99%E5%BA%93)</font>
 
 <font color=green size=5>[国内flowus仓库——完整](https://flowus.cn/xuhu/share/7b2777c4-5670-4a6a-91ed-98e33d41b826?code=JHATBC)</font>
 
