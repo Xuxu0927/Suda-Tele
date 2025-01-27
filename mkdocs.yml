@@ -51,6 +51,7 @@ extra:
 
 # [Extensions] 扩展
 plugins:
+  - open-in-new-tab:
   - search:
     # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
       lang:
