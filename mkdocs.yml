@@ -55,38 +55,38 @@ plugins:
   - search:
     # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
       lang:
+        - zh
         - en
-        - ja
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+  - tags: # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
   - git-revision-date-localized: # 日期显示
       # ["date","datetime","iso_date","iso_datetime","timeago","custom"]
       type: timeago
       enable_creation_date: true # 创建时间
       timezone: Asia/Shanghai
-  - git-authors # 显示作者
-  - glightbox # 图像缩放
-  - meta-manager # 元数据管理
+  - git-authors: # 显示作者
+  - glightbox: # 图像缩放
+  - meta-manager: # 元数据管理
 
 markdown_extensions:
   - pymdownx.arithmatex: # latex支持
       generic: true
-  - attr_list # 给图片后面添加{width="300"}设置大小
-  - md_in_html
-  - tables
+  - attr_list: # 给图片后面添加{width="300"}设置大小
+  - md_in_html: 
+  - tables: 
   - toc:
       permalink: true # 固定标题位置为当前位置
   - pymdownx.highlight: # 代码块高亮
       linenums: false # 显示行号
       linenums_style: table
       # auto_title: true # 显示编程语言名称
-  - pymdownx.superfences # 代码块高亮插件
-  - pymdownx.inlinehilite # 段落中内置的小代码高亮
-  - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
-  - pymdownx.details # admonition需要
-  - pymdownx.caret # markdown上标显示
-  - pymdownx.tilde # markdown下标显示
-  - pymdownx.mark # markdown突出显示
+  - pymdownx.superfences: # 代码块高亮插件
+  - pymdownx.inlinehilite: # 段落中内置的小代码高亮
+  - admonition: # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
+  - pymdownx.details: # admonition需要
+  - pymdownx.caret: # markdown上标显示
+  - pymdownx.tilde: # markdown下标显示
+  - pymdownx.mark: # markdown突出显示
 
 extra_javascript:
   # latex支持
