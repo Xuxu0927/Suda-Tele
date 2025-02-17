@@ -34,7 +34,8 @@ theme:
     - search.share # 将搜索结果分享
   language: zh # 一些提示性的文字会变成中文
   icon:
-    repo: fontawesome/brands/github-alt
+    logo: fontawesome/brands/github-alt # 编辑左上角图标
+    repo: fontawesome/brands/github # 编辑右上角图标
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
 repo_url: https://github.com/Xuxu0927/Suda-Tele # 右上角点击跳转的链接
@@ -79,7 +80,7 @@ markdown_extensions:
   - pymdownx.highlight: # 代码块高亮
       linenums: false # 显示行号
       linenums_style: table
-      # auto_title: true # 显示编程语言名称
+      auto_title: true # 显示编程语言名称
   - pymdownx.superfences: # 代码块高亮插件
   - pymdownx.inlinehilite: # 段落中内置的小代码高亮
   - admonition: # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
@@ -87,6 +88,7 @@ markdown_extensions:
   - pymdownx.caret: # markdown上标显示
   - pymdownx.tilde: # markdown下标显示
   - pymdownx.mark: # markdown突出显示
+  - footnotes: #markdown脚注支持
 
 extra_javascript:
   # latex支持
@@ -96,7 +98,7 @@ extra_javascript:
 extra_css:
   - mkdocs/css/unordered-list-symbols.css # 多个无序列表符号
   - mkdocs/css/img-center.css # 图像居中
-
+  - mkdocs/css/
 
   # [Navigtion] 导航栏
 nav:
